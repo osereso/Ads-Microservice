@@ -58,8 +58,8 @@ public class Initializer {
         ad12.setAdCategory(AdCategory.POLITICS);
 
         Ads ad13 = new Ads();
-        ad5.setUrl("http://ad.adverticum.net/banners/5387620/970x250.jpg");
-        ad5.setAdCategory(AdCategory.SPORT);
+        ad13.setUrl("http://ad.adverticum.net/banners/5387620/970x250.jpg");
+        ad13.setAdCategory(AdCategory.SPORT);
 
         s.save(ad1);
         s.save(ad2);
