@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @RestController
 @RequestMapping("/politics")
 public class AdsPoliticsController {
@@ -14,7 +17,9 @@ public class AdsPoliticsController {
     AdsService service;
 
     @GetMapping(value = "")
-    public String addPoliticsAd(){
-        return service.getRandomPoliticsAdUrl();
+    public Map<String, String> givePoliticsAd(){
+        Map<String, String> responseMap = new HashMap<>();
+        responseMap.put("adImgURL", service.getRandomPoliticsAdUrl());
+        return responseMap;
     }
 }

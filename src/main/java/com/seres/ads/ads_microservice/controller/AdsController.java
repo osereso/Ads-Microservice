@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @RestController
 @RequestMapping("/main")
 public class AdsController {
@@ -14,8 +17,10 @@ public class AdsController {
     AdsService service;
 
     @GetMapping(value = "")
-    public String addMainhAd(){
-        return service.getRandomMainAdUrl();
+    public Map<String, String> giveMainhAd(){
+        Map<String, String> responsemap = new HashMap<>();
+        responsemap.put("adImgURL", service.getRandomMainAdUrl());
+        return responsemap;
     }
 
 }

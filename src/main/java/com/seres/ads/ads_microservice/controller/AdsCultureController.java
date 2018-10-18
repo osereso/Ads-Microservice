@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @RestController
 @RequestMapping("/culture")
 public class AdsCultureController {
@@ -14,8 +17,9 @@ public class AdsCultureController {
     AdsService service;
 
     @GetMapping(value = "")
-    public String addCultureAd(){
-        return service.getRandomCultureAdUrl();
+    public Map<String, String> giveCultureAd(){
+        Map<String, String> responseMap = new HashMap<>();
+        responseMap.put("adImgURL", service.getRandomCultureAdUrl());
+        return responseMap;
     }
-
 }

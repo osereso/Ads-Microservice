@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @RestController
 @RequestMapping("/sport")
 public class AdsSportController {
@@ -14,7 +17,9 @@ public class AdsSportController {
     AdsService service;
 
     @GetMapping(value = "")
-    public String addSportAd(){
-        return service.getRandomSportAdUrl();
+    public Map<String, String> addSportAd(){
+        Map<String, String> responseMap = new HashMap<>();
+        responseMap.put("adImgURL", service.getRandomSportAdUrl());
+        return responseMap;
     }
 }
