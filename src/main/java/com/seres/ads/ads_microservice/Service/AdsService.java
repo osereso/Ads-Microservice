@@ -46,3 +46,5 @@ public class AdsService {
         return ads.get(rnd.nextInt(ads.size())).getUrl();
     }
 }
+
+
