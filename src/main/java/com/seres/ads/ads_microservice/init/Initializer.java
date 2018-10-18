@@ -57,6 +57,10 @@ public class Initializer {
         ad12.setUrl("https://icdn8.digitaltrends.com/image/linkedin-mem-1-1200x250.png?ver=1");
         ad12.setAdCategory(AdCategory.POLITICS);
 
+        Ads ad13 = new Ads();
+        ad5.setUrl("http://ad.adverticum.net/banners/5387620/970x250.jpg");
+        ad5.setAdCategory(AdCategory.SPORT);
+
         s.save(ad1);
         s.save(ad2);
         s.save(ad3);
@@ -69,6 +73,7 @@ public class Initializer {
         s.save(ad10);
         s.save(ad11);
         s.save(ad12);
+        s.save(ad13);
 
     }
 }
