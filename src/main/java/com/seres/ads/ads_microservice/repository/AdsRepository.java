@@ -14,7 +14,7 @@ public interface AdsRepository extends JpaRepository<Ads, Long> {
 
     List<Ads> getAdsByAdCategory(AdCategory category);
 
-    int countDistinctByAdCategory(AdCategory category);
+    // int countDistinctByAdCategory(AdCategory category);
 
 
 

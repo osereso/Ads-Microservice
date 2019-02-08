@@ -21,10 +21,6 @@ public class AdsService {
         return ads.get(rnd.nextInt(ads.size())).getUrl();
     }
 
-    public Ads save(Ads a) {
-        return repository.save(a);
-    }
-
     public String getRandomSportAdUrl() {
             List<Ads> ads = repository.getAdsByAdCategory(AdCategory.SPORT);
         return ads.get(rnd.nextInt(ads.size())).getUrl();
@@ -44,6 +40,10 @@ public class AdsService {
     public String getRandomMainAdUrl() {
         List<Ads> ads = repository.findAll();
         return ads.get(rnd.nextInt(ads.size())).getUrl();
+    }
+
+    public Ads save(Ads a) {
+        return repository.save(a);
     }
 }
 
